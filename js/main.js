@@ -8,14 +8,12 @@ function encriptar() {
   if (checkText()) {
     encriptation();
   } else {
-    textarea.value = "";
+    addClass();
     alert("Ingrese un texto valido");
   }
 }
 
 function deleteClass(texto) {
-  console.log(texto);
-
   imagen_container.classList.remove("show");
   imagen_container.classList.add("no-show");
 
@@ -47,4 +45,17 @@ function encriptation() {
 
   texto_codificado.innerHTML = palabra;
   textarea.value = "";
+}
+
+function addClass(texto) {
+  textarea.value = "";
+
+  imagen_container.classList.remove("no-show");
+  imagen_container.classList.add("show");
+
+  button_copiar.classList.remove("visible");
+  button_copiar.classList.add("no-visible");
+
+  text.classList.remove("show");
+  text.classList.add("no-show");
 }
