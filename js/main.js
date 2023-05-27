@@ -6,26 +6,11 @@ let texto_codificado = document.getElementById("texto-codificado");
 
 function encriptar() {
   if (checkText()) {
-    console.log("bien");
+    encriptation();
   } else {
-    console.log("mal");
+    textarea.value = "";
+    alert("Ingrese un texto valido");
   }
-
-  deleteClass();
-
-  let palabra = "";
-
-  for (const element of textarea.value) {
-    if (element == "a") palabra += "ai";
-    else if (element == "e") palabra += "enter";
-    else if (element == "i") palabra += "imes";
-    else if (element == "o") palabra += "ober";
-    else if (element == "u") palabra += "ufat";
-    else palabra += element;
-  }
-
-  texto_codificado.innerHTML = palabra;
-  textarea.value = "";
 }
 
 function deleteClass(texto) {
@@ -44,4 +29,22 @@ function deleteClass(texto) {
 function checkText() {
   let regex = /^[a-z]+$/;
   return regex.test(textarea.value);
+}
+
+function encriptation() {
+  deleteClass();
+
+  let palabra = "";
+
+  for (const element of textarea.value) {
+    if (element == "a") palabra += "ai";
+    else if (element == "e") palabra += "enter";
+    else if (element == "i") palabra += "imes";
+    else if (element == "o") palabra += "ober";
+    else if (element == "u") palabra += "ufat";
+    else palabra += element;
+  }
+
+  texto_codificado.innerHTML = palabra;
+  textarea.value = "";
 }
