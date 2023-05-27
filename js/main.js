@@ -1,9 +1,11 @@
+// Variables globales
 let textarea = document.getElementById("textarea");
 let text = document.getElementById("text");
 let imagen_container = document.getElementById("container-img");
 let button_copiar = document.getElementById("container-button");
 let texto_codificado = document.getElementById("texto-codificado");
 
+// Funciones
 function encriptar() {
   if (checkText()) {
     encriptation();
@@ -13,7 +15,7 @@ function encriptar() {
   }
 }
 
-function deleteClass(texto) {
+function deleteClass() {
   imagen_container.classList.remove("show");
   imagen_container.classList.add("no-show");
 
@@ -59,4 +61,12 @@ function addClass(texto) {
 
   text.classList.remove("show");
   text.classList.add("no-show");
+}
+
+function desencriptar() {
+  if (checkText()) {
+  } else {
+    addClass();
+    alert("Ingrese un texto valido");
+  }
 }
