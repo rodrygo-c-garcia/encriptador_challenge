@@ -6,9 +6,14 @@ body {
   background-size: cover;
 }
 
+h1 {
+  font-family: 'Panchang', sans-serif;
+}
 
 .container-main,
-.container-principal {
+.container-principal,
+.container-text,
+.container-result {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,24 +21,26 @@ body {
 
 .container-main {
   height: 100vh;
+}
+
+.container-main,
+.container-text,
+.container-result {
   flex-direction: column;
 }
 
 .container-principal {
-  /* From https://css.glass */
-  background: rgba(23, 138, 231, 0.363);
-  /* border-radius: 16px; */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(51, 205, 225, 0.3);
-
-  height: 85%;
+  height: 100%;
   width: 95%;
   justify-content: space-evenly;
 }
 
-
+textarea,
+.container-result {
+  color: white;
+  font-size: 20px;
+  font-family: 'Satoshi', sans-serif;
+}
 
 .container-text {
   /* From https://css.glass */
@@ -46,7 +53,6 @@ body {
 
   height: 95%;
   width: 60%;
-  color: white;
 }
 
 .container-result {
@@ -60,4 +66,59 @@ body {
 
   height: 95%;
   width: 35%;
+}
+
+textarea {
+  width: 80%;
+  height: 70%;
+  position: static;
+  padding: 20px;
+  resize: none;
+  /* puntero */
+  caret-color: rgba(0, 0, 0, 0.555);
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.445);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  color: black;
+  opacity: .8;
+}
+
+.result {
+  width: 80%;
+  height: 70%;
+  padding: 20px;
+
+  /* From https://css.glass */
+  background: rgba(57, 28, 28, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.726);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 253, 253, 0.3);
+}
+
+.show {
+  visibility: visible;
+}
+
+.no-show {
+  visibility: hidden;
+}
+
+.img-searching {
+  object-fit: cover;
+  width: 50%;
+  height: 50%;
 }
