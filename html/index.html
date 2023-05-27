@@ -16,30 +16,32 @@
     <h1>Encriptador <span>ONE</span></h1>
     <div class="container-principal">
         <div class="container-text">
-          <textarea placeholder="Ingrese texto aqui..." name="text" id=""></textarea>
+          <textarea id="textarea" placeholder="Ingrese texto aqui..." name="text"></textarea>
           <p class="info-content"><span class="material-symbols-outlined">info</span><span class="info">Solo letras minusculas y sin acentos</span></p>
           <div class="container-button">
-            <button class="btn-encriptar">Encriptar</button>
+            <button id="btn-encriptar" class="btn-encriptar" onclick="encriptar()">Encriptar</button>
             <button class="btn-desencriptar">Desencriptar</button>
           </div>
         </div>
 
         <div class="container-result">
           <div class="result">
-            <div class="text show">
-              <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati magnam recusandae facere aperiam, delectus nobis animi architecto dicta quasi nam quibusdam cupiditate ratione odio ex porro! Explicabo, voluptas! Soluta?</p>
+            <div id="text" class="text no-show">
+              <p id="texto-codificado"></p>
             </div>
-            <div class="container-img no-show">
+            <div id="container-img" class="container-img show">
               <img class="img-searching" src="../imgs/undraw_searching_re_3ra9.svg" alt="">
               <p class="text-not-found">Ningun mensaje fue encontrado</p>
               <p class="text-msg">Ingrese el texto que desea encriptar o desencriptar.</p>
             </div>
           </div>
-          <div class="container-button show">
+          <div id="container-button" class="container-button no-show">
             <button class="btn-copiar">Copiar</button>
           </div>
       </div>
     </div>
   </main>
+
+  <script src="../js/main.js"></script>
 </body>
 </html>
