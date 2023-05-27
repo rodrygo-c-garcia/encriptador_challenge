@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://api.fontshare.com/v2/css?f[]=panchang@500&f[]=satoshi@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <title>Encriptador ONE</title>
 </head>
@@ -12,11 +13,18 @@
     <h1>Encriptador ONE</h1>
     <div class="container-principal">
         <div class="container-text">
-          <textarea name="text" id="" cols="30" rows="10"></textarea>
-          
+          <textarea placeholder="Ingrese texto aqui..." name="text" id=""></textarea>
+          <div class="container-button">
+            <button>Encriptar</button>
+            <button>Desencriptar</button>
+          </div>
         </div>
         <div class="container-result">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati magnam recusandae facere aperiam, delectus nobis animi architecto dicta quasi nam quibusdam cupiditate ratione odio ex porro! Explicabo, voluptas! Soluta?</p>
+          <div class="result">
+            <p class="no-show">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati magnam recusandae facere aperiam, delectus nobis animi architecto dicta quasi nam quibusdam cupiditate ratione odio ex porro! Explicabo, voluptas! Soluta?</p>
+            <img class="img-searching" src="../imgs/undraw_searching_re_3ra9.svg" alt="">
+          </div>
+          <button>Copiar</button>
       </div>
     </div>
   </main>
