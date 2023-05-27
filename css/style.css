@@ -13,7 +13,8 @@ h1 {
 .container-main,
 .container-principal,
 .container-text,
-.container-result {
+.container-result,
+.container-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,7 +76,7 @@ textarea {
   padding: 20px;
   resize: none;
   /* puntero */
-  caret-color: rgba(0, 0, 0, 0.555);
+  caret-color: rgba(255, 255, 255, 0.555);
 
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.2);
@@ -91,7 +92,7 @@ textarea:focus {
 }
 
 textarea::placeholder {
-  color: black;
+  color: rgba(255, 255, 255, 0.712);
   opacity: .8;
 }
 
@@ -117,6 +118,10 @@ textarea::placeholder {
   display: none;
 }
 
+.no-visible {
+  visibility: hidden;
+}
+
 .img-searching {
   width: 70%;
   height: auto;
@@ -129,4 +134,52 @@ textarea::placeholder {
 
 .text-msg {
   font-family: 'Author', sans-serif;
+}
+
+/* Buttons */
+
+.container-button {
+  width: 100%;
+  margin-top: 30px;
+  justify-content: space-evenly;
+}
+
+.btn-encriptar,
+.btn-desencriptar,
+.btn-copiar {
+  width: 20em;
+  height: 3em;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-family: 'Satoshi', sans-serif;
+  box-shadow: 1px 3px 5px rgb(0, 0, 0);
+  color: white;
+  /* tiempo de transicion para el tamano del boton y su fondo */
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.btn-encriptar {
+  background-color: rgb(75, 185, 12);
+  color: black;
+}
+
+.btn-desencriptar {
+  background-color: rgb(185, 104, 12);
+}
+
+.btn-copiar {
+  background-color: rgb(12, 87, 185);
+}
+
+.btn-encriptar:hover {
+  background-color: rgba(94, 255, 0, 0.897);
+}
+
+.btn-desencriptar:hover {
+  background-color: rgb(255, 136, 0);
+}
+
+.btn-copiar:hover {
+  background-color: rgb(0, 110, 255);
 }
