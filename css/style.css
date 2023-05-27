@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('../imgs/7480151.jpg');
+  background-size: cover;
+}
+
+h1 {
+  font-family: 'Panchang', sans-serif;
+  color: rgba(8, 11, 17, 0.555);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.548);
+}
+
+h1>span {
+  color: rgb(206, 193, 12);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.534);
+}
+
+.container-main,
+.container-principal,
+.container-text,
+.container-result,
+.container-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-main {
+  height: 100vh;
+}
+
+.container-main,
+.container-text,
+.container-result {
+  flex-direction: column;
+}
+
+.container-principal {
+  height: 100%;
+  width: 95%;
+  justify-content: space-evenly;
+}
+
+textarea,
+.container-result {
+  color: white;
+  font-size: 20px;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.container-text {
+  /* From https://css.glass */
+  background: rgba(12, 32, 211, 0.582);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  height: 95%;
+  width: 60%;
+}
+
+.container-result {
+  /* From https://css.glass */
+  background: rgba(76, 143, 18, 0.575);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(96, 166, 34, 0.3);
+
+  height: 95%;
+  width: 35%;
+}
+
+textarea {
+  width: 80%;
+  height: 65%;
+  position: static;
+  padding: 20px;
+  resize: none;
+  /* puntero */
+  caret-color: rgba(255, 255, 255, 0.555);
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.445);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.712);
+  opacity: .8;
+}
+
+.result {
+  width: 80%;
+  height: 70%;
+  padding: 20px;
+  text-align: center;
+  /* From https://css.glass */
+  background: rgba(57, 28, 28, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.726);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 253, 253, 0.3);
+}
+
+.show {
+  visibility: visible;
+}
+
+.no-show {
+  display: none;
+}
+
+.no-visible {
+  visibility: hidden;
+}
+
+.img-searching {
+  width: 70%;
+  height: auto;
+}
+
+.text-not-found {
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.795);
+}
+
+.text-msg {
+  font-family: 'Author', sans-serif;
+}
+
+.info-content {
+  font-family: 'Author', sans-serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  width: 85%;
+  height: 10px;
+  text-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+
+.info {
+  margin-left: 5px;
+}
+
+/* Buttons */
+
+.container-button {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.btn-encriptar,
+.btn-desencriptar,
+.btn-copiar {
+  width: 20em;
+  height: 3em;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-family: 'Satoshi', sans-serif;
+  box-shadow: 1px 3px 5px rgb(0, 0, 0);
+  color: white;
+  /* tiempo de transicion para el tamano del boton y su fondo */
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-encriptar {
+  background-color: rgb(75, 185, 12);
+  color: black;
+}
+
+.btn-desencriptar {
+  background-color: rgb(185, 104, 12);
+}
+
+.btn-copiar {
+  margin-top: 20px;
+  background-color: rgb(12, 87, 185);
+}
+
+.btn-encriptar:hover {
+  background-color: rgba(94, 255, 0, 0.897);
+}
+
+.btn-desencriptar:hover {
+  background-color: rgb(255, 136, 0);
+}
+
+.btn-copiar:hover {
+  background-color: rgb(0, 110, 255);
+}
