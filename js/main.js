@@ -5,6 +5,12 @@ let button_copiar = document.getElementById("container-button");
 let texto_codificado = document.getElementById("texto-codificado");
 
 function encriptar() {
+  if (checkText()) {
+    console.log("bien");
+  } else {
+    console.log("mal");
+  }
+
   deleteClass();
 
   let palabra = "";
@@ -33,4 +39,9 @@ function deleteClass(texto) {
 
   text.classList.remove("no-show");
   text.classList.add("show");
+}
+
+function checkText() {
+  let regex = /^[a-z]+$/;
+  return regex.test(textarea.value);
 }
