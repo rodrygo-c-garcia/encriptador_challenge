@@ -99,7 +99,7 @@ textarea::placeholder {
   width: 80%;
   height: 70%;
   padding: 20px;
-
+  text-align: center;
   /* From https://css.glass */
   background: rgba(57, 28, 28, 0.2);
   border-radius: 16px;
@@ -114,11 +114,11 @@ textarea::placeholder {
 }
 
 .no-show {
-  visibility: hidden;
+  display: none;
 }
 
 .img-searching {
   object-fit: cover;
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: auto;
 }
