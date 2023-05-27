@@ -177,6 +177,7 @@ textarea::placeholder {
   color: white;
   /* tiempo de transicion para el tamano del boton y su fondo */
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .btn-encriptar {
