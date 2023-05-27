@@ -125,10 +125,6 @@ textarea::placeholder {
   display: none;
 }
 
-.no-visible {
-  visibility: hidden;
-}
-
 .img-searching {
   width: 70%;
   height: auto;

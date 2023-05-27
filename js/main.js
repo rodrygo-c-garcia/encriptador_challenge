@@ -17,7 +17,7 @@ function deleteClass(texto) {
   imagen_container.classList.remove("show");
   imagen_container.classList.add("no-show");
 
-  button_copiar.classList.remove("no-visible");
+  button_copiar.classList.remove("no-show");
   button_copiar.classList.add("show");
 
   text.classList.remove("no-show");
@@ -25,6 +25,7 @@ function deleteClass(texto) {
 }
 
 function checkText() {
+  // expresion regular para verificar que el texto sea valido
   let regex = /^[a-z]+$/;
   return regex.test(textarea.value);
 }
@@ -54,7 +55,7 @@ function addClass(texto) {
   imagen_container.classList.add("show");
 
   button_copiar.classList.remove("visible");
-  button_copiar.classList.add("no-visible");
+  button_copiar.classList.add("no-show");
 
   text.classList.remove("show");
   text.classList.add("no-show");
