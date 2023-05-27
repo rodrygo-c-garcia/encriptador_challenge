@@ -2,6 +2,43 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url('/imgs/7480151.jpg');
+  background-image: url('../imgs/7480151.jpg');
   background-size: cover;
+}
+
+.container-main {
+  height: 100vh;
+}
+
+.container-main,
+.container-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-principal {
+  /* From https://css.glass */
+  background: rgba(154, 12, 190, 0.363);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(51, 205, 225, 0.3);
+
+  height: 95%;
+  width: 95%;
+  justify-content: space-evenly;
+}
+
+.container-text {
+  background-color: blue;
+  height: 95%;
+  width: 60%;
+}
+
+.container-result {
+  background-color: rgb(42, 165, 69);
+  height: 95%;
+  width: 35%;
 }
