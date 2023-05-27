@@ -6,9 +6,6 @@ body {
   background-size: cover;
 }
 
-.container-main {
-  height: 100vh;
-}
 
 .container-main,
 .container-principal {
@@ -17,28 +14,50 @@ body {
   justify-content: center;
 }
 
+.container-main {
+  height: 100vh;
+  flex-direction: column;
+}
+
 .container-principal {
   /* From https://css.glass */
-  background: rgba(154, 12, 190, 0.363);
-  border-radius: 16px;
+  background: rgba(23, 138, 231, 0.363);
+  /* border-radius: 16px; */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(51, 205, 225, 0.3);
 
-  height: 95%;
+  height: 85%;
   width: 95%;
   justify-content: space-evenly;
 }
 
+
+
 .container-text {
-  background-color: blue;
+  /* From https://css.glass */
+  background: rgba(12, 32, 211, 0.582);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
   height: 95%;
   width: 60%;
+  color: white;
 }
 
 .container-result {
-  background-color: rgb(42, 165, 69);
+  /* From https://css.glass */
+  background: rgba(76, 143, 18, 0.575);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(96, 166, 34, 0.3);
+
   height: 95%;
   width: 35%;
 }
