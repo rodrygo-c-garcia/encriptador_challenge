@@ -8,6 +8,13 @@ body {
 
 h1 {
   font-family: 'Panchang', sans-serif;
+  color: rgba(8, 11, 17, 0.555);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.548);
+}
+
+h1>span {
+  color: rgb(206, 193, 12);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.534);
 }
 
 .container-main,
@@ -71,7 +78,7 @@ textarea,
 
 textarea {
   width: 80%;
-  height: 70%;
+  height: 65%;
   position: static;
   padding: 20px;
   resize: none;
@@ -136,11 +143,24 @@ textarea::placeholder {
   font-family: 'Author', sans-serif;
 }
 
+.info-content {
+  font-family: 'Author', sans-serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  width: 85%;
+  height: 10px;
+  text-shadow: 1px 1px 5px rgb(255, 255, 255);
+}
+
+.info {
+  margin-left: 5px;
+}
+
 /* Buttons */
 
 .container-button {
   width: 100%;
-  margin-top: 30px;
   justify-content: space-evenly;
 }
 
@@ -169,6 +189,7 @@ textarea::placeholder {
 }
 
 .btn-copiar {
+  margin-top: 25px;
   background-color: rgb(12, 87, 185);
 }
 
