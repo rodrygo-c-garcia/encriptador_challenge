@@ -27,8 +27,8 @@ function deleteClass() {
 }
 
 function checkText() {
-  // expresion regular para verificar que el texto sea valido
-  let regex = /^[a-z]+$/;
+  // expresion regular para verificar que el texto sea valido y tambien acepta espaciados
+  let regex = /^[a-z ]+$/;
   return regex.test(textarea.value);
 }
 
@@ -88,4 +88,19 @@ function decrypt() {
   // mostrar el texto desencriptado
   texto_codificado.innerHTML = palabra;
   textarea.value = "";
+}
+
+function copy() {
+  // usando la api de clipboard
+  // Copiar el texto al portapapeles
+  navigator.clipboard
+    .writeText(texto_codificado.textContent)
+    .then(() => {
+      // Mostrar un mensaje de éxito
+      console.log("Texto copiado al portapapeles");
+    })
+    .catch((error) => {
+      // Mostrar un mensaje de error
+      console.error("Error al copiar el texto: ", error);
+    });
 }
