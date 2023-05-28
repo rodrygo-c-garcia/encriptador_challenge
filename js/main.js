@@ -1,9 +1,11 @@
+// Variables globales
 let textarea = document.getElementById("textarea");
 let text = document.getElementById("text");
 let imagen_container = document.getElementById("container-img");
 let button_copiar = document.getElementById("container-button");
 let texto_codificado = document.getElementById("texto-codificado");
 
+// Funciones
 function encriptar() {
   if (checkText()) {
     encriptation();
@@ -13,7 +15,7 @@ function encriptar() {
   }
 }
 
-function deleteClass(texto) {
+function deleteClass() {
   imagen_container.classList.remove("show");
   imagen_container.classList.add("no-show");
 
@@ -36,11 +38,11 @@ function encriptation() {
   let palabra = "";
 
   for (const element of textarea.value) {
-    if (element == "a") palabra += "ai";
-    else if (element == "e") palabra += "enter";
-    else if (element == "i") palabra += "imes";
-    else if (element == "o") palabra += "ober";
-    else if (element == "u") palabra += "ufat";
+    if (element === "a") palabra += "ai";
+    else if (element === "e") palabra += "enter";
+    else if (element === "i") palabra += "imes";
+    else if (element === "o") palabra += "ober";
+    else if (element === "u") palabra += "ufat";
     else palabra += element;
   }
 
@@ -59,4 +61,31 @@ function addClass(texto) {
 
   text.classList.remove("show");
   text.classList.add("no-show");
+}
+
+function desencriptar() {
+  if (checkText()) {
+    decrypt();
+  } else {
+    addClass();
+    alert("Ingrese un texto valido");
+  }
+}
+
+function decrypt() {
+  deleteClass();
+
+  // obtener el texto codificado
+  let palabra = textarea.value;
+
+  // reemplazar cada código por la vocal correspondiente
+  palabra = palabra.replace(/ai/g, "a");
+  palabra = palabra.replace(/enter/g, "e");
+  palabra = palabra.replace(/imes/g, "i");
+  palabra = palabra.replace(/ober/g, "o");
+  palabra = palabra.replace(/ufat/g, "u");
+
+  // mostrar el texto desencriptado
+  texto_codificado.innerHTML = palabra;
+  textarea.value = "";
 }
