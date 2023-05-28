@@ -46,12 +46,11 @@ h1>span {
 textarea,
 .container-result {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Satoshi', sans-serif;
 }
 
 .container-text {
-  /* From https://css.glass */
   background: rgba(12, 32, 211, 0.582);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -60,11 +59,10 @@ textarea,
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   height: 95%;
-  width: 60%;
+  width: 55%;
 }
 
 .container-result {
-  /* From https://css.glass */
   background: rgba(76, 143, 18, 0.575);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -73,19 +71,18 @@ textarea,
   border: 1px solid rgba(96, 166, 34, 0.3);
 
   height: 95%;
-  width: 35%;
+  width: 40%;
 }
 
 textarea {
-  width: 80%;
-  height: 65%;
+  width: 85%;
+  height: 55%;
   position: static;
   padding: 20px;
   resize: none;
   /* puntero */
   caret-color: rgba(255, 255, 255, 0.555);
 
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.445);
@@ -108,7 +105,6 @@ textarea::placeholder {
   height: 70%;
   padding: 20px;
   text-align: center;
-  /* From https://css.glass */
   background: rgba(57, 28, 28, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.726);
@@ -144,7 +140,7 @@ textarea::placeholder {
   font-size: 18px;
   display: flex;
   align-items: center;
-  width: 85%;
+  width: 88%;
   height: 10px;
   text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
@@ -163,7 +159,7 @@ textarea::placeholder {
 .btn-encriptar,
 .btn-desencriptar,
 .btn-copiar {
-  width: 20em;
+  width: 40%;
   height: 3em;
   border-radius: 10px;
   border: none;
