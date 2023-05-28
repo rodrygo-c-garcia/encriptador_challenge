@@ -38,11 +38,11 @@ function encriptation() {
   let palabra = "";
 
   for (const element of textarea.value) {
-    if (element == "a") palabra += "ai";
-    else if (element == "e") palabra += "enter";
-    else if (element == "i") palabra += "imes";
-    else if (element == "o") palabra += "ober";
-    else if (element == "u") palabra += "ufat";
+    if (element === "a") palabra += "ai";
+    else if (element === "e") palabra += "enter";
+    else if (element === "i") palabra += "imes";
+    else if (element === "o") palabra += "ober";
+    else if (element === "u") palabra += "ufat";
     else palabra += element;
   }
 
@@ -65,8 +65,27 @@ function addClass(texto) {
 
 function desencriptar() {
   if (checkText()) {
+    decrypt();
   } else {
     addClass();
     alert("Ingrese un texto valido");
   }
+}
+
+function decrypt() {
+  deleteClass();
+
+  // obtener el texto codificado
+  let palabra = textarea.value;
+
+  // reemplazar cada código por la vocal correspondiente
+  palabra = palabra.replace(/ai/g, "a");
+  palabra = palabra.replace(/enter/g, "e");
+  palabra = palabra.replace(/imes/g, "i");
+  palabra = palabra.replace(/ober/g, "o");
+  palabra = palabra.replace(/ufat/g, "u");
+
+  // mostrar el texto desencriptado
+  texto_codificado.innerHTML = palabra;
+  textarea.value = "";
 }
