@@ -27,8 +27,8 @@ function deleteClass() {
 }
 
 function checkText() {
-  // expresion regular para verificar que el texto sea valido
-  let regex = /^[a-z]+$/;
+  // expresion regular para verificar que el texto sea valido y tambien acepta espaciados
+  let regex = /^[a-z ]+$/;
   return regex.test(textarea.value);
 }
 
